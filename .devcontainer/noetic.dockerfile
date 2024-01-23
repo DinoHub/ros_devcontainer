@@ -108,12 +108,12 @@ RUN mkdir -p /home/$USERNAME/ws/src
 ## YOLOX
 RUN python3 -m pip install -U pip
 RUN python3 -m pip install pyyaml rospkg simple-pid pyinotify gdown
-RUN echo "export PATH=/home/user/.local/bin:$PATH" >> ~/.bashrc 
+RUN echo "export PATH=/home/$USERNAME/.local/bin:$PATH" >> ~/.bashrc 
 
 ## Set up bashrc
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 RUN echo "source ~/ws/devel/setup.bash" >> ~/.bashrc
-WORKDIR /home/$USERNAME/ros_ws
+WORKDIR /home/$USERNAME/ws
 
 
 
