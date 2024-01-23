@@ -20,7 +20,7 @@
         "--volume=${localEnv:HOME}/.Xauthority:/root/.Xauthority",
         "--gpus=all"
     ],
-
+      
     "workspaceMount": "source=${localWorkspaceFolder},target=/home/user/ws/src/${localWorkspaceFolderBasename},type=bind",
     "workspaceFolder": "/home/user/ws/src/${localWorkspaceFolderBasename}",
 
