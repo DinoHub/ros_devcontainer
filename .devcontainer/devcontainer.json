@@ -13,15 +13,16 @@
         }
     },
     "runArgs": [
+        "--rm",
         "--env=\"QT_X11_NO_MITSHM=1\"",
         "--volume=/tmp/.X11-unix:/tmp/.X11-unix:rw",
         "--network=host",
         "--volume=${localEnv:HOME}/.Xauthority:/root/.Xauthority",
         "--gpus=all"
     ],
-
-    "workspaceMount": "source=${localWorkspaceFolder},target=/ws/src/${localWorkspaceFolderBasename},type=bind",
-    "workspaceFolder": "/ws/src/${localWorkspaceFolderBasename}",
+      
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/user/ws/src/${localWorkspaceFolderBasename},type=bind",
+    "workspaceFolder": "/home/user/ws/src/${localWorkspaceFolderBasename}",
 
     "containerEnv": {
         "SHELL": "/bin/bash",
